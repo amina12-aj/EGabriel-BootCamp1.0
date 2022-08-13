@@ -11,7 +11,7 @@ To join the program, follow these steps:
 > Fill this table with your details to join the program.
 
 | Name                 | Email                 | Github         | What concept you'd like to learn       |
-|---------------------:|:---------------------:|--------------_:|---------------------------------------:|
+|---------------------:|:---------------------:|---------------:|---------------------------------------:|
 | Gabriel Emmanuel     |connect@egabriel.dev   | Virifortissimi | Api, MVC etc                           |
 
 
