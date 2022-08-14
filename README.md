@@ -6,8 +6,7 @@
 
 | Name                 | Email                 | Github         | What concept you'd like to learn       |
 |---------------------:|:---------------------:|---------------:|---------------------------------------:|
-| Okpala Olisaemekal     |olisamarvis@gmail.com   | OlisaMarvis| Api, MVC, Signal R, jWT                        |
-
-
+| Okpala Olisaemekal   |olisamarvis@gmail.com  | OlisaMarvis    | Api, MVC, Signal R, jWT                |
+| Stanley Ugo          |stanleyugoofficial@gmail.com   | stanley-ugo | Microservices, gRpc, Reddis etc   |
 
 > Looking forward to what we accomplished together.
