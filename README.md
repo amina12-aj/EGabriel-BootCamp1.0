@@ -16,5 +16,6 @@ To join the program, follow these steps:
 | Simeon Chuks         |simeonchuksapi@gmail.com | IAMSIMCODE   | Micro Services, Api, Grpc, Dapr, SignalR, Azure |
 | Okpala Olisaemekal   |olisamarvis@gmail.com  | OlisaMarvis    | Api, MVC, Signal R, jWT                |
 | Stanley Ugo          |stanleyugoofficial@gmail.com   | stanley-ugo | Microservices, gRpc, Reddis etc   |
+| Jude Omenai          |jdonmarie@gmail.com  | JMario1  | gRpc, testing, caching, DDD |
 
 > Looking forward to what we accomplished together.
