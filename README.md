@@ -13,6 +13,7 @@ To join the program, follow these steps:
 | Name                 | Email                 | Github         | What concept you'd like to learn       |
 |---------------------:|:---------------------:|---------------:|---------------------------------------:|
 | Gabriel Emmanuel     |connect@egabriel.dev   | Virifortissimi | Api, MVC etc                           |
+| Simeon Chuks         |simeonchuksapi@gmail.com | IAMSIMCODE   | Micro Services, Api, Grpc, Dapr, SignalR, Azure |
 
 
 
