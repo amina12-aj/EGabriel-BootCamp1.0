@@ -12,7 +12,7 @@ To join the program, follow these steps:
 
 | Name                 | Email                 | Github         | What concept you'd like to learn       |
 |---------------------:|:---------------------:|---------------:|---------------------------------------:|
-| Gabriel Emmanuel     |connect@egabriel.dev   | Virifortissimi | Api, MVC etc                           |
+| Okpala Olisaemekal     |olisamarvis@gmail.com   | OlisaMarvis| Api, MVC, Signal R, jWT                        |
 
 
 
