@@ -16,5 +16,6 @@ To join the program, follow these steps:
 | Simeon Chuks         |simeonchuksapi@gmail.com | IAMSIMCODE   | Micro Services, Api, Grpc, Dapr, SignalR, Azure |
 | Okpala Olisaemekal   |olisamarvis@gmail.com  | OlisaMarvis    | Api, MVC, Signal R, jWT                |
 | Stanley Ugo          |stanleyugoofficial@gmail.com   | stanley-ugo | Microservices, gRpc, Reddis etc   |
+| Jonas Ababio          |jonasages@gmail.com   | [mk-milly02](https://github.com/mk-milly02) | Microservices, ASP.NET, Design Patterns   |
 
 > Looking forward to what we accomplished together.
