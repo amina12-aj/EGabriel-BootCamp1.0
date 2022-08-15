@@ -20,5 +20,6 @@ To join the program, follow these steps:
 | Jonas Ababio         |jonasages@gmail.com    | [mk-milly02](https://github.com/mk-milly02) | Microservices, ASP.NET, Design Patterns   |
 | Jude Omenai          |jdonmarie@gmail.com  | JMario1  | gRpc, testing, caching, DDD |
 | Amina Bakare         |bakareaminata@gmail.com  | amina12-aj | API, Signal R, JWT, Azure, Docker, MVC, Design patterns gRpc, Unit testing, caching |
+| Abraham Micheal	   |Abrahammicheal55@yahoo.com|Onimcodes   | Web API, MVC , Azure, Design patterns
 
 > Looking forward to what we accomplished together.
