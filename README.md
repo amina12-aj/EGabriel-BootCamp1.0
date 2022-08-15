@@ -21,5 +21,5 @@ To join the program, follow these steps:
 | Jude Omenai          |jdonmarie@gmail.com  | JMario1  | gRpc, testing, caching, DDD |
 | Amina Bakare         |bakareaminata@gmail.com  | amina12-aj | API, Signal R, JWT, Azure, Docker, MVC, Design patterns gRpc, Unit testing, caching |
 | Abraham Micheal	   |Abrahammicheal55@yahoo.com|Onimcodes   | Web API, MVC , Azure, Design patterns
-
+| Sholagbade abdulmalik|abdulmalikgbolahan95@gmail.com | Hardeymolar | Asp.Net core, Web API, Microservice,Signal R
 > Looking forward to what we accomplished together.
