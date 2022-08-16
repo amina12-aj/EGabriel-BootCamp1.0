@@ -23,4 +23,5 @@ To join the program, follow these steps:
 | Abraham Micheal	   |Abrahammicheal55@yahoo.com|Onimcodes   | Web API, MVC , Azure, Design patterns |
 | Sholagbade abdulmalik|abdulmalikgbolahan95@gmail.com | Hardeymolar | Asp.Net core, Web API, Microservice,Signal R. |
 |Aderonke Adelabu	   |adelabu.aderonke9638@gmail.com|AdelabuAderonke| Web API, .NetCore, Angular,Azure, SignalR,JWT,Microservices,gRpc|
+|Adetunji Isaac		   |isaaccrown26@gmail.com		  |Isaac-crown    | Web Api, Mvc, Azure, Sql, Testing  |
 > Looking forward to what we accomplished together.
