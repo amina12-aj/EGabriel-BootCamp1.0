@@ -4,7 +4,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:46722",
+      "applicationUrl": "http://localhost:12442",
       "sslPort": 0
     }
   },
@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Microservices": {
+    "CRUDWithSqlServer": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",

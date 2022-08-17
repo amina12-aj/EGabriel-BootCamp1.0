@@ -1,6 +1,6 @@
 using System;
 
-namespace Microservices
+namespace CRUDWithSqlServer
 {
     public class WeatherForecast
     {
