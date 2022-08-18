@@ -1,4 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using WebApi.Models;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var connectionString = builder.Configuration.GetConnectionString("ProductDB");
+builder.Services.AddDbContextPool<ProductDBContext>(option =>
+option.UseSqlServer(connectionString)
+);
 
 // Add services to the container.
 
