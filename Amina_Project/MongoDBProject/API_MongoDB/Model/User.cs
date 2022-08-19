@@ -1,0 +1,15 @@
+﻿using MongoDB.Entities;
+
+namespace API_MongoDB.Model
+{
+    public class User: Entity
+
+    {
+        public string? FirstName { get; set; } = default;
+        public string? LastName { get; set; } = default;  
+        public DateTime? CreatedDate { get; set; }
+        public string? Email { get; set; } = default;
+        public string? Gender { get; set; } 
+       
+    }
+}
