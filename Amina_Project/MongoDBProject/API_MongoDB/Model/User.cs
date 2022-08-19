@@ -9,7 +9,12 @@ namespace API_MongoDB.Model
         public string? LastName { get; set; } = default;  
         public DateTime? CreatedDate { get; set; }
         public string? Email { get; set; } = default;
-        public string? Gender { get; set; } 
+        public Gender Gender { get; set; } 
        
+    }
+    public enum Gender 
+    { 
+        Female = 1,
+        Male = 2
     }
 }

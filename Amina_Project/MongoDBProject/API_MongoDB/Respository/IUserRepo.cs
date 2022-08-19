@@ -5,10 +5,8 @@ namespace API_MongoDB.Respository
 {
     public interface IUserRepo
     {
-      Task CreateUser(User user)
-        {
-            
+        Task CreateUser(User user);
 
-        }
+      
     }
 }
