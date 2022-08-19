@@ -10,7 +10,7 @@ namespace CRUDWithMongoDB.Services
             await product.SaveAsync();
         }
 
-        public async Task<IEnumerable<Product>> GetAll()
+        public async Task<List<Product>> GetAll()
         {
             return await DB.Find<Product>().Match(_ => true).ExecuteAsync();
         }

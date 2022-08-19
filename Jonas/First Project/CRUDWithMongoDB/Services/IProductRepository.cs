@@ -6,7 +6,7 @@ namespace CRUDWithMongoDB.Services
     {
         Task Create(Product product);
 
-        Task<IEnumerable<Product>> GetAll();
+        Task<List<Product>> GetAll();
 
         Task<Product> Get(string id);
 
