@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 await DB.InitAsync("UserManagement",
     MongoClientSettings.FromConnectionString(
-        "mongodb//Amina_projects:nikesisteR1@apicluster.3bmdiwh.mongodb.net/?retryWrites=true&w=majority"));
+        "mongodb+srv://Pearl:LpcGcW5azR4mQUZ2@cluster0.zy4uivh.mongodb.net/?retryWrites=true&w=majority"));
 // Add services to the container.
 
 builder.Services.AddScoped<IUserRepo, UserRepo>();
