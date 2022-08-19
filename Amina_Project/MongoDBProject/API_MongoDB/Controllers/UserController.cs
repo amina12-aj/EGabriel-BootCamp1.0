@@ -12,6 +12,7 @@ namespace API_MongoDB.Controllers
         public UserController(IUserRepo userRepo)
         { _UserRepo = userRepo; }
 
+
         [HttpPost]
         public async Task<IActionResult> Create(User user)
         {
