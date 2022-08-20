@@ -39,6 +39,7 @@ namespace SimpleWebApiWithSql.Controllers
         }
 
         [HttpPut]
+        [Route("Update")]
         public async Task<IActionResult> Update([FromBody] Product product)
         {
              _productService.UpdateProduct(product);
@@ -46,7 +47,8 @@ namespace SimpleWebApiWithSql.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> Update(int Id)
+        [Route("Delete")]
+        public async Task<IActionResult> Delete(int Id)
         {
             _productService.DeletProduct(Id);
             return Ok("Product Deleted");
