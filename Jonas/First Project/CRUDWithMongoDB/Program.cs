@@ -1,14 +1,14 @@
-using Microsoft.EntityFrameworkCore;
-using WebApi.Models;
+using CRUDWithMongoDB.Services;
+using MongoDB.Driver;
+using MongoDB.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("ProductDB");
-builder.Services.AddDbContextPool<ProductDBContext>(option =>
-option.UseSqlServer(connectionString)
-);
-
 // Add services to the container.
+var connectionString = builder.Configuration.GetConnectionString("ProductDB");
+await DB.InitAsync("ProductDB", MongoClientSettings.FromConnectionString(connectionString));
+
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -23,6 +23,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

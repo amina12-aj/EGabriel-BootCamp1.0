@@ -1,14 +1,11 @@
+using CRUDWithSqlServer.Models;
 using Microsoft.EntityFrameworkCore;
-using WebApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("ProductDB");
-builder.Services.AddDbContextPool<ProductDBContext>(option =>
-option.UseSqlServer(connectionString)
-);
-
 // Add services to the container.
+var connectionString = builder.Configuration.GetConnectionString("ProductDB");
+builder.Services.AddDbContextPool<ProductDbContext>(options => options.UseSqlServer(connectionString));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -23,6 +20,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
