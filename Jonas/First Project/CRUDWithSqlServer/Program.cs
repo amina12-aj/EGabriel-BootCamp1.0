@@ -1,19 +1,13 @@
-using MongoDB.Driver;
-using MongoDB.Entities;
-using WebApi.Reposiotry;
+using CRUDWithSqlServer.Models;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
-await DB.InitAsync("UserManagement",
-    MongoClientSettings.FromConnectionString(
-        "mongodb+srv://dbUser:adetunji26@cluster0.dgg1gpb.mongodb.net/?retryWrites=true&w=majority"));
-
+var connectionString = builder.Configuration.GetConnectionString("ProductDB");
+builder.Services.AddDbContextPool<ProductDbContext>(options => options.UseSqlServer(connectionString));
 
 builder.Services.AddControllers();
-
-builder.Services.AddScoped<IUserRepo, UserRepo>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -26,6 +20,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
