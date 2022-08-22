@@ -2,12 +2,15 @@ using CrudApiMongodb.Repository;
 using MongoDB.Driver;
 using MongoDB.Entities;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+var conn = builder.Configuration.GetConnectionString("myconnection");
 await DB.InitAsync("UserManagement",
     MongoClientSettings.FromConnectionString
-    ("mongodb+srv://harmal:hardeymolar1@mongofortest.gowzzvn.mongodb.net/?retryWrites=true&w=majority"));
+    (conn));
 
 builder.Services.AddScoped<IUserRepo, UserRepo>();
 builder.Services.AddControllers();
