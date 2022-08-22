@@ -3,13 +3,13 @@ using OA.DataAccess;
 
 namespace OA.Repository
 {
-    public class Repositoty<T> : IRepository<T> where T : BaseEntity
+    public class Repository<T> : IRepository<T> where T : BaseEntity
     {
         private readonly ApplicationContext context;
 
         private readonly DbSet<T> entities;
 
-        public Repositoty(ApplicationContext context)
+        public Repository(ApplicationContext context)
         {
             this.context = context;
             entities = context.Set<T>();
