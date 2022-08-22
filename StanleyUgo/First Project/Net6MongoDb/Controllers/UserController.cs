@@ -24,5 +24,29 @@ namespace Net6MongoDb.Controllers
 
             return Ok(user);
         }
+
+        [HttpGet("/get-all")]
+        public async Task<IActionResult> Get()
+        {
+            var allUsers = await _userRepo.GetAll();
+
+            return Ok(allUsers);
+        }
+
+        [HttpGet("/get")]
+        public async Task<IActionResult> GetById(string id)
+        {
+            var user = await _userRepo.Get(id);
+
+            return Ok(user);
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> Update(string id, User user)
+        {
+            var updatedUser = await _userRepo.Update(id, user);
+
+            return Ok(updatedUser);
+        }
     }
 }
