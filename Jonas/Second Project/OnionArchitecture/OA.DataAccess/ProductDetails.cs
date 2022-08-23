@@ -1,6 +1,6 @@
 namespace OA.DataAccess
 {
-    public class ProductDetails : BaseEntity
+    public class ProductDetails : Product
     {
         public int StockAvailable { get; set; }
         public decimal Price { get; set; }
