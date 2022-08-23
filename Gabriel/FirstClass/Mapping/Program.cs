@@ -1,23 +1,18 @@
-global using SimpleWebApiWithMongoDb.Data.Repository;
-
-using MongoDB.Driver;
-using MongoDB.Entities;
-
+using Mapping.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<ITodoService, TodoService>();
+
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//Add Mongo db connection string 
-await DB.InitAsync("UserManagement",
-    MongoClientSettings.FromConnectionString("MongoDb Connection Strings"));
-
-builder.Services.AddScoped<IUserRepo, UserRepo>();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 
