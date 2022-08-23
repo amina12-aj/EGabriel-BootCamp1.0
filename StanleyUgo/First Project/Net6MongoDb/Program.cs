@@ -5,10 +5,6 @@ using Net6MongoDb.Repository;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-await DB.InitAsync("UserManagement",
-     MongoClientSettings.FromConnectionString(
-        "mongodb+srv://Stanley-Ugo:scott4wheels@usermanagementdb.pj7dqxz.mongodb.net/?retryWrites=true&w=majority"));
-
 builder.Services.AddScoped<IUserRepo, UserRepo>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
