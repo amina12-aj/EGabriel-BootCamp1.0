@@ -1,6 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using OA.Repository;
+using OA.Service;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var connectionString = builder.Configuration.GetConnectionString("HydroDB");
+builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connectionString));
+
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddTransient<IProductService, ProductService>();
+builder.Services.AddTransient<IProductDetailsService, ProductDetailsService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
