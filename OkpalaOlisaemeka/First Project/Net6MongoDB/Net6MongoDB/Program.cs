@@ -5,9 +5,7 @@ using NET6MONGODB.Repository;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-await DB.InitAsync("UserManagement",
-    MongoClientSettings.FromConnectionString(
-        "mongodb+srv://Olisamarvis:Centre138@cluster0.jyv26rr.mongodb.net/?retryWrites=true&w=majority"));
+//Add connection strings here
 
 builder.Services.AddScoped<IUserRepo, UserRepo>();        
 builder.Services.AddControllers();
