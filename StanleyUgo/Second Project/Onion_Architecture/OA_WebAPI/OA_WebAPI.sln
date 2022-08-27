@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OA_Repository", "..\OA_Repo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OA_DataAccess", "..\OA_DataAccess\OA_DataAccess.csproj", "{8731E116-01D8-4A19-9E3E-F492301775BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OA_Services", "..\OA_Services\OA_Services.csproj", "{1F1E60AC-FBD9-447F-ACBC-4FDF9A39C3B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8731E116-01D8-4A19-9E3E-F492301775BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8731E116-01D8-4A19-9E3E-F492301775BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8731E116-01D8-4A19-9E3E-F492301775BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F1E60AC-FBD9-447F-ACBC-4FDF9A39C3B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F1E60AC-FBD9-447F-ACBC-4FDF9A39C3B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F1E60AC-FBD9-447F-ACBC-4FDF9A39C3B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F1E60AC-FBD9-447F-ACBC-4FDF9A39C3B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
