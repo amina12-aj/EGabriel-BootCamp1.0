@@ -25,4 +25,5 @@ To join the program, follow these steps:
 |Aderonke Adelabu	   |adelabu.aderonke9638@gmail.com|AdelabuAderonke| Web API, .NetCore, Angular,Azure, SignalR,JWT,Microservices,gRpc|
 |Adetunji Isaac		   |isaaccrown26@gmail.com		  |Isaac-crown    | Web Api, Mvc, Azure, Sql, Testing  |
 Olugbade Abdullateef    |abdullateefolugbade@gmail.com  | Latmos4luv    | Web API, MVC, .NetCore, Angular,Azure, SignalR,JWT,Microservices
+| Oladejo Abimbola   | abimbolaoladejo4@gmail.com | Nimi77        | Web API, Microservices, Azure, Testing, Caching etc
 > Looking forward to what we accomplished together.
