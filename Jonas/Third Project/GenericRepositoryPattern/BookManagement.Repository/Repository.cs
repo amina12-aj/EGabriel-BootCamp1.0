@@ -1,4 +1,4 @@
-using BookManagement.Domain;
+﻿using BookManagement.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookManagement.Repository
@@ -15,9 +15,11 @@ namespace BookManagement.Repository
             entities = context.Set<T>();
         }
 
-        public async Task<bool> Delete(T entity)
+        public async Task<bool> Delete(int id)
         {
-            if(entity is null) throw new ArgumentNullException(nameof(entity));
+            T? entity = await entities.SingleOrDefaultAsync(e => e.Id == id);
+            if (entity is null) return false;
+
             entities.Remove(entity);
             await context.SaveChangesAsync();
             return true;
@@ -28,21 +30,23 @@ namespace BookManagement.Repository
             return await entities.SingleOrDefaultAsync(e => e.Id == id);
         }
 
-        public async Task<IEnumerable<T>> GetAll()
+        public IEnumerable<T> GetAll()
         {
-            return await entities.ToListAsync();
+            return entities.AsEnumerable();
         }
 
         public async Task Insert(T entity)
         {
-            if(entity is null) throw new ArgumentNullException(nameof(entity));
+            if (entity is null) throw new ArgumentNullException(nameof(entity));
+
             await entities.AddAsync(entity);
             await context.SaveChangesAsync();
         }
 
         public async Task Update(T entity)
         {
-            if(entity is null) throw new ArgumentNullException(nameof(entity));
+            if (entity is null) throw new ArgumentNullException(nameof(entity));
+
             await context.SaveChangesAsync();
         }
     }
