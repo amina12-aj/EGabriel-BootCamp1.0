@@ -1,6 +1,7 @@
+using BookManagement.Domain;
 using Microsoft.EntityFrameworkCore;
 
-namespace BookManagement.Domain
+namespace BookManagement.Repository
 {
     public class ApplicationContext : DbContext
     {
