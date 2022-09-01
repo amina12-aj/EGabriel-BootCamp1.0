@@ -5,9 +5,9 @@ VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookManagement.Domain", "BookManagement.Domain\BookManagement.Domain.csproj", "{BA9FC4F7-2507-44B0-BE22-1611F8A68138}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookManagement.UI", "BookManagement.UI\BookManagement.UI.csproj", "{185B38D5-9B19-42F7-8665-625D30F6AFA6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookManagement.Repository", "BookManagement.Repository\BookManagement.Repository.csproj", "{66D68E0A-BC48-4C4C-B903-7633620724F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookManagement.UI", "BookManagement.UI\BookManagement.UI.csproj", "{9A65440D-9AC0-4635-8218-D852B261CF23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +27,10 @@ Global
 		{66D68E0A-BC48-4C4C-B903-7633620724F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66D68E0A-BC48-4C4C-B903-7633620724F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66D68E0A-BC48-4C4C-B903-7633620724F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A65440D-9AC0-4635-8218-D852B261CF23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A65440D-9AC0-4635-8218-D852B261CF23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A65440D-9AC0-4635-8218-D852B261CF23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A65440D-9AC0-4635-8218-D852B261CF23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

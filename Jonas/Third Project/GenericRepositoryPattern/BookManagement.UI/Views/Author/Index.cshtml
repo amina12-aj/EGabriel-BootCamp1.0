@@ -1,8 +1,27 @@
+@model IEnumerable<AuthorListingViewModel>
 @{
     ViewData["Title"] = "Authors";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Authors</h1>
-    
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <h1>@ViewData["Title"]</h1>
+        </div>
+        <div class="col-4 align-self-center">
+            <a asp-action="AddAuthor" data-bs-toggle="modal" data-bs-target="#addAuthor" class="btn btn-primary">
+                Add Author
+            </a>
+        </div>
+    </div>
 </div>
+
+<div aria-hidden="true" aria-labelledby="addAuthorLabel" role="dialog" tabindex="-1" id="addAuthor" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            @await Html.PartialAsync("_AddAuthor", new AuthorBookViewModel())
+        </div>
+    </div>
+</div>
+
+@section scripts { <script src="~/js/author-index.js" asp-append-version="true"></script> }

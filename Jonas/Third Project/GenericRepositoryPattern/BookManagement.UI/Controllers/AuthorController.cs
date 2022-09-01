@@ -34,5 +34,41 @@ namespace BookManagement.UI.Controllers
             });
             return View("Index", model);
         }
+
+        [HttpGet]
+        public PartialViewResult AddAuthor()
+        {
+            AuthorBookViewModel model = new();
+            return PartialView("_AddAuthor", model);
+        }
+
+        [HttpPost]
+        public IActionResult AddAuthor(AuthorBookViewModel model)
+        {
+            Author author = new() 
+            {  
+                FirstName = model.FirstName,  
+                LastName = model.LastName,  
+                Email = model.Email,  
+                DateAdded = DateTime.UtcNow,  
+                IPAddress = Request.HttpContext.Connection.RemoteIpAddress.ToString(),  
+                DateModified = DateTime.UtcNow,  
+                
+                Books = new List < Book > 
+                {  
+                    new Book 
+                    {  
+                        Name = model.BookName,  
+                        ISBN = model.ISBN,  
+                        Publisher = model.Publisher,  
+                        IPAddress = Request.HttpContext.Connection.RemoteIpAddress.ToString(),  
+                        DateAdded = DateTime.UtcNow,  
+                        DateModified = DateTime.UtcNow  
+                    }  
+                }  
+            };  
+            authorRepository.Insert(author);  
+            return RedirectToAction("Index"); 
+        }
     }
 }
