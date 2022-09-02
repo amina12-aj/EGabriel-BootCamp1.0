@@ -70,5 +70,64 @@ namespace BookManagement.UI.Controllers
             authorRepository.Insert(author);  
             return RedirectToAction("Index"); 
         }
+
+        [HttpGet]
+        public async Task<IActionResult> EditAuthor(int id)
+        {
+            AuthorViewModel model = new();
+            var author = await authorRepository.Get(id);
+
+            if (author is not null)
+            {
+                model.FirstName = author.FirstName;
+                model.LastName = author.LastName;
+                model.Email = author.Email;
+            }
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditAuthor(int id, AuthorViewModel model)
+        {
+            var author = await authorRepository.Get(id);
+
+            if (author is not null)
+            {
+                author.FirstName = model.FirstName;
+                author.LastName = model.LastName;
+                author.Email = model.Email;
+                author.DateModified = DateTime.UtcNow;
+                author.IPAddress = Request.HttpContext.Connection.RemoteIpAddress.ToString();
+
+                await authorRepository.Update(author);
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public PartialViewResult AddBook()
+        {
+            BookViewModel model = new();
+            return PartialView("_AddBook", model);
+        }
+
+        [HttpPost]
+        public IActionResult AddBook(int id, AuthorBookViewModel model)
+        {
+            Book book = new() 
+            {  
+                AuthorId = id,
+                Name = model.BookName,  
+                ISBN = model.ISBN,  
+                Publisher = model.Publisher,  
+                DateAdded = DateTime.UtcNow,  
+                IPAddress = Request.HttpContext.Connection.RemoteIpAddress.ToString(),  
+                DateModified = DateTime.UtcNow  
+            };  
+            bookRepository.Insert(book);  
+            return RedirectToAction("Index"); 
+        }
     }
 }

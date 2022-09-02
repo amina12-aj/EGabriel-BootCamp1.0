@@ -15,14 +15,13 @@ namespace BookManagement.Repository
             entities = context.Set<T>();
         }
 
-        public async Task<bool> Delete(int id)
+        public async Task Delete(int id)
         {
             T? entity = await entities.SingleOrDefaultAsync(e => e.Id == id);
-            if (entity is null) return false;
+            if (entity is null) return;
 
             entities.Remove(entity);
             await context.SaveChangesAsync();
-            return true;
         }
 
         public async Task<T?> Get(int id)

@@ -8,6 +8,6 @@ namespace BookManagement.Repository
         Task<T?> Get(int id);
         Task Insert(T entity);
         Task Update(T entity);
-        Task<bool> Delete(int id);
+        Task Delete(int id);
     }
 }

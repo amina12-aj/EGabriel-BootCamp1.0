@@ -13,6 +13,11 @@
                 Add Author
             </a>
         </div>
+        <div class="col-4 align-self-center">
+            <a asp-action="AddBook" data-bs-toggle="modal" data-bs-target="#addBook" class="btn btn-primary">
+                Add Book
+            </a>
+        </div>
     </div>
     <div class="my-card-list mt-4">
         @{
@@ -27,7 +32,9 @@
                         <h6 class="card-subtitle text-muted">@author.Email</h6>
                         <br>
                         <p class="card-text">Total number of books = @author.TotalBooks</p>
-                        <a class="card-link my-card-link">Edit</a>
+                        <a asp-action="EditAuthor" asp-route-id="@author.Id" class="card-link my-card-link">
+                            Edit
+                        </a>
                         <a class="card-link my-card-link-danger">Delete</a>
                     </div>
                 </div>
@@ -36,10 +43,20 @@
     </div>
 </div>
 
+<!--Add Author modal-->
 <div aria-hidden="true" aria-labelledby="addAuthorLabel" role="dialog" tabindex="-1" id="addAuthor" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
             @await Html.PartialAsync("_AddAuthor", new AuthorBookViewModel())
+        </div>
+    </div>
+</div>
+
+<!--Add Book modal-->
+<div aria-hidden="true" aria-labelledby="addBookLabel" role="dialog" tabindex="-1" id="addBook" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            @await Html.PartialAsync("_AddBook", new BookViewModel())
         </div>
     </div>
 </div>
