@@ -1,0 +1,64 @@
+@model IEnumerable<AuthorListingViewModel>
+@{
+    ViewData["Title"] = "Authors";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <h1>@ViewData["Title"]</h1>
+        </div>
+        <div class="col-4 align-self-center">
+            <a asp-action="AddAuthor" data-bs-toggle="modal" data-bs-target="#addAuthor" class="btn btn-primary">
+                Add Author
+            </a>
+        </div>
+        <div class="col-4 align-self-center">
+            <a asp-action="AddBook" data-bs-toggle="modal" data-bs-target="#addBook" class="btn btn-primary">
+                Add Book
+            </a>
+        </div>
+    </div>
+    <div class="my-card-list mt-4">
+        @{
+            foreach (var author in Model)
+            {
+                <div class="card mt-4" style="width: 18rem; margin: auto">
+                    <div class="card-header">
+                        Icon
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@author.Name</h5>
+                        <h6 class="card-subtitle text-muted">@author.Email</h6>
+                        <br>
+                        <p class="card-text">Total number of books = @author.TotalBooks</p>
+                        <a asp-action="EditAuthor" asp-route-id="@author.Id" class="card-link my-card-link">
+                            Edit
+                        </a>
+                        <a class="card-link my-card-link-danger">Delete</a>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>
+
+<!--Add Author modal-->
+<div aria-hidden="true" aria-labelledby="addAuthorLabel" role="dialog" tabindex="-1" id="addAuthor" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            @await Html.PartialAsync("_AddAuthor", new AuthorBookViewModel())
+        </div>
+    </div>
+</div>
+
+<!--Add Book modal-->
+<div aria-hidden="true" aria-labelledby="addBookLabel" role="dialog" tabindex="-1" id="addBook" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            @await Html.PartialAsync("_AddBook", new BookViewModel())
+        </div>
+    </div>
+</div>
+
+@section scripts { <script src="~/js/author-index.js" asp-append-version="true"></script> }

@@ -1,20 +1,15 @@
+using CrudAPI.MongoDB.Repo;
 using MongoDB.Driver;
-using MongoDB.Driver.Core.Configuration;
 using MongoDB.Entities;
-using WebApi.Reposiotry;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 await DB.InitAsync("UserManagement",
-  "mongodb+srv://dbUser:adetunji26@cluster0.dgg1gpb.mongodb.net/?retryWrites=true&w=majority"));
-//builder.Services.Configure<BookStoreDatabaseSettings>(
-//    builder.Configuration.GetSection("BookStoreDatabase"));
-
+MongoClientSettings.FromConnectionString(
+    "mongodb+srv://Nimi77:tolulopemi@cluster0.7qxkquv.mongodb.net/?retryWrites=true&w=majority"));
+builder.Services.AddScoped<MyUserRepo, UserRepo>();
 builder.Services.AddControllers();
-
-builder.Services.AddScoped<IUserRepo, UserRepo>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -27,6 +22,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
