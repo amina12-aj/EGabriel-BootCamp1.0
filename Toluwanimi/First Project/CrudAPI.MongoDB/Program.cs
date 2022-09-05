@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 await DB.InitAsync("UserManagement",
 MongoClientSettings.FromConnectionString(
-    "mongodb+srv://Nimi77:<tolulopemi11>@cluster0.7qxkquv.mongodb.net/?retryWrites=true&w=majority"));
+    "mongodb+srv://Nimi77:tolulopemi@cluster0.7qxkquv.mongodb.net/?retryWrites=true&w=majority"));
 builder.Services.AddScoped<MyUserRepo, UserRepo>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
