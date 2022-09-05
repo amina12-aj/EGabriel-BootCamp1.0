@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace OA_WebAPI.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class ProductController : Controller
     {
         private readonly IProductService productService;
