@@ -7,7 +7,7 @@ namespace API_MongoDB.Respository
     {
         public async Task CreateUser(User user)
         {
-            await user.SaveAsync();
+          await user.SaveAsync();
 
         }
 
