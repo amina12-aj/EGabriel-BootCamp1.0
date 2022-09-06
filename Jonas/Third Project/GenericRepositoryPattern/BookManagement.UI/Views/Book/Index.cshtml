@@ -1,0 +1,35 @@
+@model IEnumerable<BookListingViewModel>
+@{
+    ViewData["Title"] = "Books";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <h1>@ViewData["Title"]</h1>
+        </div>
+    </div>
+    <div class="my-card-list mt-4">
+        @{
+            foreach (var book in Model)
+            {
+                <div class="card mt-4" style="width: 18rem; margin: auto">
+                    <div class="card-header">
+                        Icon
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@book.BookName</h5>
+                        <h6 class="card-subtitle text-muted">@book.AuthorName</h6>
+                        <br>
+                        <p class="card-text">@book.Publisher</p>
+                        <p class="card-text">@book.ISBN</p>
+                        <a asp-action="EditBook" asp-route-id="@book.Id" class="card-link my-card-link">
+                            Edit
+                        </a>
+                        <a asp-action="DeleteBook" asp-route-id="@book.Id" class="card-link my-card-link-danger">Delete</a>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>
