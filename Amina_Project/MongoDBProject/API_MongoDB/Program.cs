@@ -6,8 +6,9 @@ using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//await DB.InitAsync("UserManagement",
-    //MongoClientSettings.FromConnectionString("mongodb+srv://Pearl:LpcGcW5azR4mQUZ2@cluster0.zy4uivh.mongodb.net/?retryWrites=true&w=majority"));
+
+await DB.InitAsync("UserManagement",
+MongoClientSettings.FromConnectionString("mongodb+srv://Pearl:LpcGcW5azR4mQUZ2@cluster0.zy4uivh.mongodb.net/?retryWrites=true&w=majority"));
 // Add services to the container.
 
 
@@ -42,7 +43,6 @@ builder.Services.AddSwaggerGen(
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
