@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/CrudAPI.SQL.csproj",
+                "${workspaceFolder}/First Project/CrudAPI.SQL/CrudAPI.SQL/CrudAPI.SQL.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/CrudAPI.SQL.csproj",
+                "${workspaceFolder}/First Project/CrudAPI.SQL/CrudAPI.SQL/CrudAPI.SQL.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/CrudAPI.SQL.csproj"
+                "${workspaceFolder}/First Project/CrudAPI.SQL/CrudAPI.SQL/CrudAPI.SQL.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
