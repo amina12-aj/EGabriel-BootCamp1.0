@@ -16,7 +16,7 @@ namespace ProductCrudAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Product>>> Get()
+        public async Task<ActionResult<List<Product>>> Get()
         {
             return await _context.Products.ToListAsync();
 
