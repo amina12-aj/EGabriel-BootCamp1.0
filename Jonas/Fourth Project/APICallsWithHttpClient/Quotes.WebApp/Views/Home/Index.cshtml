@@ -1,0 +1,49 @@
+﻿@model List<QuoteViewModel>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Quotes</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <section class="hero-container align-items-center justify-content-center">
+        <div class="text-center col-7">
+            <h4>@Model[0].Quote</h4>
+            <br>
+            <p>- @Model[0].Author</p>
+        </div>
+    </section>
+    <section class="hero-container-wt align-items-center justify-content-center">
+        <div class="text-center col-7">
+            <h4>@Model[1].Quote</h4>
+            <br>
+            <p>- @Model[1].Author</p>
+        </div>
+    </section>
+    <section class="hero-container align-items-center justify-content-center">
+        <div class="text-center col-7">
+            <h4>@Model[2].Quote</h4>
+            <br>
+            <p>- @Model[2].Author</p>
+        </div>
+    </section>
+    <section class="hero-container-wt align-items-center justify-content-center">
+        <div class="text-center col-7">
+            <h4>@Model[3].Quote</h4>
+            <br>
+            <p>- @Model[3].Author</p>
+        </div>
+    </section>
+    <section class="hero-container align-items-center justify-content-center">
+        <div class="text-center col-7">
+            <h4>@Model[4].Quote</h4>
+            <br>
+            <p>- @Model[4].Author</p>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,40 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.my-card-link {
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.my-card-link-danger {
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.my-card-link-danger:hover {
+  color: red;
+}
+
+.my-card-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

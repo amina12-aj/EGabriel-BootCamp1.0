@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GRP.Data", "GRP.Data\GRP.Data.csproj", "{3B1EA2CF-9982-4ACE-BD24-FD433238CE9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GRP.Web", "GRP.Web\GRP.Web.csproj", "{75C6D2AD-FF4F-4544-8F21-951B3A4CA321}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B1EA2CF-9982-4ACE-BD24-FD433238CE9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B1EA2CF-9982-4ACE-BD24-FD433238CE9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B1EA2CF-9982-4ACE-BD24-FD433238CE9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B1EA2CF-9982-4ACE-BD24-FD433238CE9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75C6D2AD-FF4F-4544-8F21-951B3A4CA321}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75C6D2AD-FF4F-4544-8F21-951B3A4CA321}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75C6D2AD-FF4F-4544-8F21-951B3A4CA321}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75C6D2AD-FF4F-4544-8F21-951B3A4CA321}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84E5D203-5371-4C61-98C5-1B9C9684C0C5}
+	EndGlobalSection
+EndGlobal

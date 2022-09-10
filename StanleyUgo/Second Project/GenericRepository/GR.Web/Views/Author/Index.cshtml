@@ -1,0 +1,13 @@
+﻿@model IEnumerable<AuthorListingViewModel>
+@using GR.Web.Models
+@using GR.Web
+
+<div class="top-buffer"></div>
+<div class="panel panel-primary">
+    <div class="panel-heading panel-head">Authors</div>
+    <div class="panel-body">
+        <div class="btn-group">
+            <a id="createEditAuthorModal" data-toggle="modal" asp-action="AddAuthor" data-target="#modal-action-author" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i>Add Author</a>
+        </div>
+    </div>
+</div>

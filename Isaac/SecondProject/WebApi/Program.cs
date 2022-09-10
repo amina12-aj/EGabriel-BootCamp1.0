@@ -1,4 +1,5 @@
 using MongoDB.Driver;
+using MongoDB.Driver.Core.Configuration;
 using MongoDB.Entities;
 using WebApi.Reposiotry;
 
@@ -7,9 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 await DB.InitAsync("UserManagement",
-    MongoClientSettings.FromConnectionString(
-        "mongodb+srv://dbUser:adetunji26@cluster0.dgg1gpb.mongodb.net/?retryWrites=true&w=majority"));
-
+  "mongodb+srv://dbUser:adetunji26@cluster0.dgg1gpb.mongodb.net/?retryWrites=true&w=majority"));
+//builder.Services.Configure<BookStoreDatabaseSettings>(
+//    builder.Configuration.GetSection("BookStoreDatabase"));
 
 builder.Services.AddControllers();
 

@@ -16,7 +16,7 @@ To join the program, follow these steps:
 | Simeon Chuks         |simeonchuksapi@gmail.com | IAMSIMCODE   | Micro Services, Api, Grpc, Dapr, SignalR, Azure |
 | Okpala Olisaemekal   |olisamarvis@gmail.com  | OlisaMarvis    | Api, MVC, Signal R, jWT                |
 | Stanley Ugo          |stanleyugoofficial@gmail.com   | stanley-ugo | Microservices, gRpc, Reddis etc   |
-| Akinwole Samuel      | samuelakinwole@gmail.com| SAkinwole    | API, Microservices, Azure, Testing, Caching etc
+| Akinwole Samuel      | samuelakinwole@gmail.com| [SAkinwole](https://github.com/SAkinwole)    | API, Microservices, Azure, Testing, Caching etc
 | Jonas Ababio         |jonasages@gmail.com    | [mk-milly02](https://github.com/mk-milly02) | Microservices, ASP.NET, Design Patterns   |
 | Jude Omenai          |jdonmarie@gmail.com  | JMario1  | gRpc, testing, caching, DDD |
 | Amina Bakare         |bakareaminata@gmail.com  | amina12-aj | API, Signal R, JWT, Azure, Docker, MVC, Design patterns gRpc, Unit testing, caching |
@@ -26,4 +26,5 @@ To join the program, follow these steps:
 |Adetunji Isaac		   |isaaccrown26@gmail.com		  |Isaac-crown    | Web Api, Mvc, Azure, Sql, Testing  |
 Olugbade Abdullateef    |abdullateefolugbade@gmail.com  | Latmos4luv    | Web API, MVC, .NetCore, Angular,Azure, SignalR,JWT,Microservices
 | Oladejo Abimbola   | abimbolaoladejo4@gmail.com | Nimi77        | Web API, Microservices, Azure, Testing, Caching etc
+|Ifedi M Onyeche| ifedimarco85@gmail.com|Ifedimarco| JWT,Microservices,Web API,Sql, MVC, ASP.NETCore,Azure, Testing, Caching,react/angular 
 > Looking forward to what we accomplished together.
