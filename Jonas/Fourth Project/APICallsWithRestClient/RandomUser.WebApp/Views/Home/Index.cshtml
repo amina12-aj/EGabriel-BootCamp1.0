@@ -1,0 +1,27 @@
+﻿@model IEnumerable<UserViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-left card-group">
+    @{
+        foreach (var user in Model)
+        {
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="@user.Picture">
+                <div class="card-body">
+                    <h5 class="card-title">@user.Name</h5>
+                    <p class="card-subtitle text-muted">@user.Email</p>
+                    <p class="card-text">
+                        <ul>
+                            <li>@user.Gender</li>
+                            <li>@user.DOB</li>
+                            <li>@user.Phone</li>
+                        </ul>
+                    </p>
+                    <a href="#" class="btn btn-primary">Connect</a>
+                </div>
+            </div>
+        }
+    }
+</div>
