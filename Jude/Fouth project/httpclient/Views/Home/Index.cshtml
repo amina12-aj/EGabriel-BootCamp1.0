@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h3>Search for hubs available in a state</h3>
+    <br>
+    <form asp-controller="Home" asp-action="Index" method="post">
+        <input type="Text" name="state">
+        <input type="Submit" value="Search">
+    </form>
+    <br>
+    <br>
+    @if (ViewBag.Error != null)
+    {
+        <div>
+            <p>@ViewBag.Error</p>
+        </div>
+    }
+
+    <div>
+        <ol>
+            @if (ViewBag.Result != null)
+            {
+                @foreach (HubModel hub in ViewBag.Result)
+                {
+                    <li><a href=@hub.Website target="_blank">@hub.Name</a></li>
+                }
+            }
+        </ol>
+    </div>
+    
+</div>
