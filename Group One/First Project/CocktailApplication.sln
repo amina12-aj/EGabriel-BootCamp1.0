@@ -1,23 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CocktailApplication.Domain", "CocktailApplication.Domain\CocktailApplication.Domain.csproj", "{A56CF499-E7CE-4213-9391-DA26FC69D79F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CocktailApplication.Domain", "CocktailApplication.Domain\CocktailApplication.Domain.csproj", "{A56CF499-E7CE-4213-9391-DA26FC69D79F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CocktailApplication.Presentation", "CocktailApplication.Presentation\CocktailApplication.Presentation.csproj", "{1FB64569-9CFC-4D75-9AEF-AC9B0E3C8D74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CocktailApplication.Presentation", "CocktailApplication.Presentation\CocktailApplication.Presentation.csproj", "{1FB64569-9CFC-4D75-9AEF-AC9B0E3C8D74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CocktailApplication.Repository", "CocktailApplication.Repository\CocktailApplication.Repository.csproj", "{4D72FA96-AFDE-4647-AA5D-5DE1DEA2DE32}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CocktailApplication.Service", "CocktailApplication.Service\CocktailApplication.Service.csproj", "{20E1E647-8076-4E86-9484-BE00C9BEF817}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CocktailApplication.Repository", "CocktailApplication.Repository\CocktailApplication.Repository.csproj", "{4D72FA96-AFDE-4647-AA5D-5DE1DEA2DE32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A56CF499-E7CE-4213-9391-DA26FC69D79F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -32,9 +27,11 @@ Global
 		{4D72FA96-AFDE-4647-AA5D-5DE1DEA2DE32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D72FA96-AFDE-4647-AA5D-5DE1DEA2DE32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D72FA96-AFDE-4647-AA5D-5DE1DEA2DE32}.Release|Any CPU.Build.0 = Release|Any CPU
-		{20E1E647-8076-4E86-9484-BE00C9BEF817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20E1E647-8076-4E86-9484-BE00C9BEF817}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20E1E647-8076-4E86-9484-BE00C9BEF817}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{20E1E647-8076-4E86-9484-BE00C9BEF817}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C347B45-F000-48C9-A29D-66C02A2EC87C}
 	EndGlobalSection
 EndGlobal
