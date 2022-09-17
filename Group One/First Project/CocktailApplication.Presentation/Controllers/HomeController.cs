@@ -1,21 +1,28 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using CocktailApplication.Presentation.Models;
+using CocktailApplication.Repository;
+using System.Collections.Concurrent;
 
 namespace CocktailApplication.Presentation.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly IConsume _ingredient;
 
-    public HomeController(ILogger<HomeController> logger)
+
+    public HomeController(ILogger<HomeController> logger, IConsume ingredient)
     {
         _logger = logger;
+        _ingredient = ingredient;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> GetAsync()
     {
-        return View();
+        var result =  _ingredient.GetIngredients();
+        await result;
+        return View(result);
     }
 
     public IActionResult Privacy()
