@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CocktailApplication.Domain\CocktailApplication.Domain.csproj" />
+    <ProjectReference Include="..\CocktailApplication.Repository\CocktailApplication.Repository.csproj" />
+  </ItemGroup>
+
 </Project>

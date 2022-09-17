@@ -1,7 +1,16 @@
+using CocktailApplication.Repository;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddHttpClient<IConsume, Consume>(
+    c => c.BaseAddress = new Uri(
+        "https://the-cocktail-db.p.rapidapi.com/search.php?s=vodka")
+    );
 
 var app = builder.Build();
 
