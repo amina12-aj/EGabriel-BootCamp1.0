@@ -3,11 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
+<<<<<<< HEAD
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericRepoProductAPI", "GenericRepoProductAPI.csproj", "{6A2C8A4A-5FCF-400C-8FF5-FAD82D46B400}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GR.Data", "..\GR.Data\GR.Data.csproj", "{6CBE40AB-3599-4EA9-9595-ABD312E35519}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GR.Repository", "..\GR.Repository\GR.Repository.csproj", "{F730E6AC-69D0-431D-B94E-B4DE36A3371E}"
+=======
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericRepoProductAPI", "GenericRepoProductAPI.csproj", "{6A2C8A4A-5FCF-400C-8FF5-FAD82D46B400}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GR.Data", "..\GR.Data\GR.Data.csproj", "{6CBE40AB-3599-4EA9-9595-ABD312E35519}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GR.Repository", "..\GR.Repository\GR.Repository.csproj", "{F730E6AC-69D0-431D-B94E-B4DE36A3371E}"
+>>>>>>> 6ee0bd033b0774f6c1a200257a2679099ee310fb
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

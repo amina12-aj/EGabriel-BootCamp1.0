@@ -33,7 +33,7 @@
                     BlogDetails blogInfo = new BlogDetails();
                     blogInfo.BlogId = Convert.ToInt32(allItems[0]); //id 1; newest first (top of file)
                     blogInfo.Title = allItems[1]; // "Biggest Tech Article Ever";
-                    blogInfo.Description = allItems[1]
+                    blogInfo.Description = allItems[1];
                     blogInfo.PublishedDate = DateTime.Parse(allItems[4]); // 2015-03-31
                     this.Add(blogInfo);
                 }
