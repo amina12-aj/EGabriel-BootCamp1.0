@@ -1,16 +1,16 @@
 using CocktailApplication.Repository;
+using CocktailApplication.Service;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
-
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
-builder.Services.AddHttpClient<IConsume, Consume>(
-    c => c.BaseAddress = new Uri(
-        "https://the-cocktail-db.p.rapidapi.com/search.php?s=vodka")
-    );
+builder.Services.AddHttpClient<IApiService, ApiService>();
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddTransient<ICocktailService, CocktailService>();
 
 var app = builder.Build();
 
