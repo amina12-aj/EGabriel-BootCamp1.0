@@ -1,0 +1,14 @@
+@model string
+
+<form asp-action="DeleteBook" role="form">
+    <div class="modal-header">
+        <h4 class="modal-title">Delete Book</h4>
+    </div>
+
+    <div class="modal-body form-horizontal">Are you sure you want to delete @Model ? </div>
+
+    <div class="modal-footer">
+        <a asp-action="Index" class="btn btn-default" type="button">Back</a>
+            <button class="btn btn-success btn-danger" type="submit">Delete</button>
+    </div> 
+</form> 

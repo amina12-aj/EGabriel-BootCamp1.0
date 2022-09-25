@@ -1,0 +1,75 @@
+@model IEnumerable<AuthorListingModel>
+
+@{
+    ViewData["Title"] = "Authors";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <h2>@ViewData["Title"]</h2>
+        </div>
+        <div class="panel-body">
+            <div class="btn-group">
+                <a asp-action="AddAuthor" data-bs-toggle="modal" data-bs-target="#addAuthor" class="btn btn-primary">
+                   Add Author
+                </a>
+            </div>    
+        </div>
+    </div> 
+        <div class ="top-buffer"></div>
+        <table class = "table table-bordered table-striped table-condensed">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Cart</th>
+                    <th>Action</th>
+                </tr>
+           </thead>
+           <tbody>
+               @foreach(var item in Model) 
+               {
+                   <tr>
+                       <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                       <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                       <td>@Html.DisplayFor(modelItem => item.Cart)</td>
+                       <td> <a id = "editAuthorModal" data-toggle = "modal" asp-action = "EditAuthor" asp-route-id = "@item.Id" 
+                              data-target = "#modal-action-author" class = "btn btn-info" > 
+                                <i class = "glyphicon glyphicon-pencil"></i>Edit
+                            </a>
+
+                            <a id = "addBookModal" data-toggle = "modal" asp-action = "AddBook" asp-route-id = "@item.Id" 
+                               data-target = "#modal-action-author" class = "btn btn-warning" > 
+                                <i class = "glyphicon glyphicon-book"></i>Add Book
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+ <!--Add Author modal-->
+<div aria-hidden="true" aria-labelledby="addAuthorLabel" role="dialog" tabindex="-1" id="addAuthor" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            @await Html.PartialAsync("_AddAuthor", new AddAuthorModel())
+        </div>
+    </div>
+</div>
+
+
+@* <!--Add Book modal-->
+<div aria-hidden="true" aria-labelledby="addBookLabel" role="dialog" tabindex="-1" id="addBook" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            @await Html.PartialAsync("_AddBook", new BookViewModel())
+        </div>
+    </div>
+</div> *@
+
+@section scripts { <script src="~/js/author-index.js" asp-append-version="true"></script> }
+
+

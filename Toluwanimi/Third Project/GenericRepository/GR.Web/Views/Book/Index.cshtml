@@ -1,0 +1,54 @@
+@model IEnumerable<BookListingModel>
+
+@{
+    ViewData["Title"] = "Books";
+}
+
+<div class = "container">
+    <div class="row">
+        <div class="col-4">
+            <h2>@ViewData["Title"]</h2>
+        </div>
+    </div>    
+    <div class = "panel-body">
+        <div class="top-buffer"></div>
+        <table class = "table table-bordered table-striped table-condensed">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Author Name</th>
+                    <th>Category</th>
+                    <th>ISBN</th>
+                    <th>Publisher</th>
+                    <th>Action</th>
+                </tr>
+           </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.BookName)</td>
+                    <td>@Html.DisplayFor(modelItem => item.AuthorName)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Category)</td>
+                    <td>@Html.DisplayFor(modelItem => item.ISBN)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Publisher)</td>
+                    <td>
+                        <a id ="editBookModal" data-toggle = "modal" asp-action = "EditBook" asp-route-id = "@item.Id" 
+                            data-target = "#modal-action-book" class = "btn btn-info" > 
+                            <i class ="glyphicon glyphicon-pencil"></i>Edit
+                        </a>   
+                        <a id ="deleteBookModal" data-toggle = "modal" asp-action = "DeleteBook" asp-route-id = "@item.Id" 
+                            data-target = "#modal-action-book" class = "btn btn-danger" > 
+                            <i class ="glyphicon glyphicon-trash"></i>Delete
+                        </a>    
+                    </td>
+                </tr>
+            }
+        </tbody>
+        </table>    
+    </div>
+</div>
+
+
+
+    
